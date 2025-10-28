@@ -189,11 +189,6 @@ class _HomePageState extends State<HomePage> {
 - Headers
 - Copy to clipboard
 
-### Filtering
-- By endpoint (text search)
-- By status code (200, 404, etc.)
-- Clear filters button
-
 ---
 
 ## 🔧 Advanced Usage
@@ -220,10 +215,6 @@ controller.addLog(NetworkLog.create(
 
 // Clear logs
 controller.clearLogs();
-
-// Set filters
-controller.setFilters(endpoint: 'users', statusCode: 200);
-controller.clearFilters();
 
 // Listen to changes
 controller.addListener(() {
