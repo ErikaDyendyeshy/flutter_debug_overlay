@@ -5,7 +5,7 @@ A professional debug overlay for Flutter apps — view network logs, inspect JSO
 
 ## 🎬 Demo
 
-https://github.com/ErikaDyendyeshy/flutter_debug_overlay/blob/main/demo.mp4
+https://github.com/ErikaDyendyeshy/flutter_debug_overlay/demo.mov
 
 *Demo video showing the debug overlay in action on iOS simulator*
 
