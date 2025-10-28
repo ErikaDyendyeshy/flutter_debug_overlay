@@ -240,35 +240,6 @@ MaterialApp(
 
 ---
 
-## 🆚 Why v1.0.0?
-
-### Before (v0.x)
-```yaml
-dependencies:
-  flutter_bloc: ^9.1.1  # ❌ Conflicts
-  get_it: ^8.2.0        # ❌ Conflicts
-  equatable: ^2.0.5     # ❌ Unnecessary
-```
-
-❌ 2500+ lines of code  
-❌ BLoC architecture  
-❌ Complex DI setup  
-❌ Conflicts with user's BLoC/DI  
-
-### After (v1.0.0)
-```yaml
-dependencies:
-  dio: ^5.4.0           # ✅ Already in your project
-  flutter_json_view: ^1.1.3  # ✅ Lightweight
-```
-
-✅ 800 lines of code  
-✅ Simple ChangeNotifier  
-✅ No initialization  
-✅ **No conflicts!**
-
----
-
 ## 📊 What's Inside
 
 ```
