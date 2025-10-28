@@ -1,9 +1,9 @@
 name: qa_debug_overlay
 description: "A professional debug overlay widget for QA testing with network logging, JSON viewer, and filtering."
 version: 1.0.0
-homepage: https://github.com/yourusername/flutter_debug_overlay
-repository: https://github.com/yourusername/flutter_debug_overlay
-issue_tracker: https://github.com/yourusername/flutter_debug_overlay/issues
+homepage: https://github.com/ErikaDyendyeshy/qa_debug_overlay
+repository: https://github.com/ErikaDyendyeshy/qa_debug_overlay
+issue_tracker: https://github.com/ErikaDyendyeshy/qa_debug_overlay/issues
 
 environment:
   sdk: ^3.0.0
