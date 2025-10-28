@@ -1,5 +1,4 @@
 # 🐞 QA Debug Overlay
-[![pub package](https://img.shields.io/pub/v/qa_debug_overlay.svg)](https://pub.dev/packages/qa_debug_overlay)
 [![GitHub stars](https://img.shields.io/github/stars/ErikaDyendyeshy/qa_debug_overlay.svg)](https://github.com/ErikaDyendyeshy/qa_debug_overlay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -236,23 +235,6 @@ MaterialApp(
     return child!;
   },
 );
-```
-
----
-
-## 📊 What's Inside
-
-```
-lib/
-├── controller/
-│   └── debug_overlay_controller.dart  # Simple ChangeNotifier
-├── interceptor/
-│   └── debug_interceptor.dart         # Dio interceptor
-└── widgets/
-    ├── debug_overlay_wrapper.dart     # Main wrapper
-    ├── draggable_debug_button.dart    # Floating button
-    ├── debug_logs_bottom_sheet.dart   # Bottom sheet UI
-    └── log_detail_view.dart           # Detail page
 ```
 
 ---
