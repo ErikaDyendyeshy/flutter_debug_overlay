@@ -7,7 +7,7 @@ QA Debug Overlay — inspect HTTP calls, view JSON logs, and debug Flutter apps 
 
 ## 🎬 Demo
 
-![Demo](demo.gif)
+![Demo](https://github.com/ErikaDyendyeshy/qa_debug_overlay/raw/main/demo.gif)
 
 *Demo showing the debug overlay in action on iOS simulator*
 
