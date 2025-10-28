@@ -1,6 +1,6 @@
 # 🐞 QA Debug Overlay
 [![pub package](https://img.shields.io/pub/v/qa_debug_overlay.svg)](https://pub.dev/packages/qa_debug_overlay)
-[![GitHub stars](https://img.shields.io/github/stars/erika-dev/qa_debug_overlay.svg)](https://github.com/erika-dev/qa_debug_overlay)
+[![GitHub stars](https://img.shields.io/github/stars/erika-dev/qa_debug_overlay.svg)](https://github.com/ErikaDyendyeshy/qa_debug_overlay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 QA Debug Overlay — inspect HTTP calls, view JSON logs, and debug Flutter apps effortlessly.
