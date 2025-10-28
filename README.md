@@ -343,6 +343,6 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## 🙏 Credits
 
-Built with ❤️ for Flutter developers
+Created by [Erika](https://github.com/ErikaDyendyeshy) — QA meets Flutter magic 💚
 
-**Made Simple. No BLoC. No Drama.** 😎
+**Made Simple. No Drama.** 😎
