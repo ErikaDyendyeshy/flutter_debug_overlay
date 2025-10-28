@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_debug_overlay/flutter_debug_overlay.dart';
+import 'package:qa_debug_overlay/qa_debug_overlay.dart';
 
 void main() {
   late DebugOverlayController controller;
