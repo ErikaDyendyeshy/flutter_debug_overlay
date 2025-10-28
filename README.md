@@ -7,13 +7,9 @@ A lightweight debug overlay for Flutter apps — view network logs, inspect JSON
 
 ## 🎬 Demo
 
-<!-- Add your video here! You can:
-1. Upload to GitHub and link it
-2. Upload to YouTube/Vimeo and embed
-3. Convert to GIF and upload as file
--->
+https://github.com/ErikaDyendyeshy/flutter_debug_overlay/blob/main/demo.mp4
 
-**Coming soon: Demo video showing the debug overlay in action!**
+*Demo video showing the debug overlay in action on iOS simulator*
 
 ## ✨ Features
 
