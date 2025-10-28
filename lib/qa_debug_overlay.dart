@@ -1,7 +1,6 @@
 /// Flutter Debug Overlay - Simple QA Testing Tool
 /// 
 /// A lightweight debug overlay for Flutter with network logging and JSON viewer.
-/// No dependencies on BLoC or get_it - works with any project!
 /// 
 /// ## Quick Start
 /// 
@@ -27,8 +26,6 @@ library;
 export 'src/controller/debug_overlay_controller.dart';
 
 // Network Interceptors & Helpers
-export 'src/interceptor/debug_interceptor.dart'; // For Dio
-export 'src/helpers/http_logger.dart'; // For http package
 export 'src/helpers/firebase_logger.dart'; // For Firebase
 
 // UI Widgets
