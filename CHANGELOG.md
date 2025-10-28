@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0] - 2024-12-19
+## [1.0.1] - 2025-01-28
+
+### 🐛 Bug Fixes
+- Fixed demo GIF path to display correctly on pub.dev
+
+## [1.0.0] - 2025-10-28
 
 ### 🎉 Initial Release
 
@@ -21,7 +26,6 @@ All notable changes to this project will be documented in this file.
 #### 🔧 Technical Details
 - **Zero Dependencies**: No BLoC, get_it, or other complex dependencies
 - **Lightweight**: Only 18KB compressed package size
-
 - **QA-Friendly**: Designed specifically for quality assurance testing
 - **Easy Integration**: Simple wrapper widget with minimal setup
 

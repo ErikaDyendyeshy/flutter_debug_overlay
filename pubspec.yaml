@@ -1,6 +1,6 @@
 name: qa_debug_overlay
 description: "A professional debug overlay widget for QA testing with network logging, JSON viewer, and filtering."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ErikaDyendyeshy/qa_debug_overlay
 repository: https://github.com/ErikaDyendyeshy/qa_debug_overlay
 issue_tracker: https://github.com/ErikaDyendyeshy/qa_debug_overlay/issues
