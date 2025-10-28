@@ -1,6 +1,9 @@
 # 🐞 QA Debug Overlay
+[![pub package](https://img.shields.io/pub/v/qa_debug_overlay.svg)](https://pub.dev/packages/qa_debug_overlay)
+[![GitHub stars](https://img.shields.io/github/stars/erika-dev/qa_debug_overlay.svg)](https://github.com/erika-dev/qa_debug_overlay)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A professional debug overlay for Flutter apps — view network logs, inspect JSON, and debug effortlessly.
+QA Debug Overlay — inspect HTTP calls, view JSON logs, and debug Flutter apps effortlessly.
 
 
 ## 🎬 Demo
@@ -23,9 +26,9 @@ A professional debug overlay for Flutter apps — view network logs, inspect JSO
 ```yaml
 dependencies:
   qa_debug_overlay: ^1.0.0
-  # Latest stable versions:
-  dio: ^5.9.0
-  http: ^1.5.0
+  # Add your HTTP client (optional):
+  dio: ^5.9.0  # For automatic logging
+  http: ^1.5.0 # For manual logging
 ```
 
 ## 🚀 Quick Start
@@ -51,9 +54,15 @@ dio.interceptors.add(DebugInterceptor());
 
 ## 🌐 Supported HTTP Clients
 
-The debug overlay works with **multiple HTTP clients**, not just Dio:
+The debug overlay works with **multiple HTTP clients** - add only what you need:
 
 ### 1. **Dio** (Recommended - Automatic Logging)
+```yaml
+dependencies:
+  qa_debug_overlay: ^1.0.0
+  dio: ^5.9.0  # Add this for automatic logging
+```
+
 ```dart
 final dio = Dio();
 dio.interceptors.add(DebugInterceptor()); // Automatic logging
@@ -61,6 +70,12 @@ await dio.get('https://api.example.com');
 ```
 
 ### 2. **HTTP Package** (Manual Logging)
+```yaml
+dependencies:
+  qa_debug_overlay: ^1.0.0
+  http: ^1.5.0  # Add this for manual logging
+```
+
 ```dart
 import 'package:qa_debug_overlay/qa_debug_overlay.dart';
 
@@ -69,24 +84,13 @@ final response = await TestHttpLogger.getWithLogging('https://api.example.com');
 final response = await TestHttpLogger.postWithLogging('https://api.example.com', data: data);
 ```
 
-### 3. **Firebase** (Manual Logging)
-```dart
-// Firebase Functions
-final result = await FirebaseLogger.logCall(
-  name: 'getUserData',
-  call: () => FirebaseFunctions.instance.httpsCallable('getUserData').call(params),
-  params: params,
-);
-
-// Firestore
-final doc = await FirebaseLogger.logRead(
-  collection: 'users',
-  docId: 'user123',
-  read: () => FirebaseFirestore.instance.collection('users').doc('user123').get(),
-);
+### 3. **Any HTTP Client** (Manual Logging)
+```yaml
+dependencies:
+  qa_debug_overlay: ^1.0.0
+  # No additional dependencies needed!
 ```
 
-### 4. **Any HTTP Client** (Manual Logging)
 ```dart
 // Log any request manually
 DebugOverlayController.instance.addLog(
@@ -185,11 +189,6 @@ class _HomePageState extends State<HomePage> {
 - Headers
 - Copy to clipboard
 
-### Filtering
-- By endpoint (text search)
-- By status code (200, 404, etc.)
-- Clear filters button
-
 ---
 
 ## 🔧 Advanced Usage
@@ -216,10 +215,6 @@ controller.addLog(NetworkLog.create(
 
 // Clear logs
 controller.clearLogs();
-
-// Set filters
-controller.setFilters(endpoint: 'users', statusCode: 200);
-controller.clearFilters();
 
 // Listen to changes
 controller.addListener(() {
@@ -339,6 +334,6 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## 🙏 Credits
 
-Built with ❤️ for Flutter developers
+Created by [Erika](https://github.com/ErikaDyendyeshy) — QA meets Flutter magic 💚
 
-**Made Simple. No BLoC. No Drama.** 😎
+**Made Simple. No Drama.** 😎
