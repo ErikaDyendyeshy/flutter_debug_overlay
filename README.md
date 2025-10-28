@@ -1,6 +1,6 @@
 # 🐞 QA Debug Overlay
 [![pub package](https://img.shields.io/pub/v/qa_debug_overlay.svg)](https://pub.dev/packages/qa_debug_overlay)
-[![GitHub stars](https://img.shields.io/github/stars/erika-dev/qa_debug_overlay.svg)](https://github.com/erika-dev/qa_debug_overlay)
+[![GitHub stars](https://img.shields.io/github/stars/ErikaDyendyeshy/qa_debug_overlay.svg)](https://github.com/ErikaDyendyeshy/qa_debug_overlay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 QA Debug Overlay — inspect HTTP calls, view JSON logs, and debug Flutter apps effortlessly.
@@ -237,35 +237,6 @@ MaterialApp(
   },
 );
 ```
-
----
-
-## 🆚 Why v1.0.0?
-
-### Before (v0.x)
-```yaml
-dependencies:
-  flutter_bloc: ^9.1.1  # ❌ Conflicts
-  get_it: ^8.2.0        # ❌ Conflicts
-  equatable: ^2.0.5     # ❌ Unnecessary
-```
-
-❌ 2500+ lines of code  
-❌ BLoC architecture  
-❌ Complex DI setup  
-❌ Conflicts with user's BLoC/DI  
-
-### After (v1.0.0)
-```yaml
-dependencies:
-  dio: ^5.4.0           # ✅ Already in your project
-  flutter_json_view: ^1.1.3  # ✅ Lightweight
-```
-
-✅ 800 lines of code  
-✅ Simple ChangeNotifier  
-✅ No initialization  
-✅ **No conflicts!**
 
 ---
 
