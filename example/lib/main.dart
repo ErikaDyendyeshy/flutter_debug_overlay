@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_debug_overlay_pro/flutter_debug_overlay_pro.dart';
+import 'package:qa_debug_overlay/qa_debug_overlay.dart';
 
 /// Example application demonstrating the Debug Overlay
 /// 

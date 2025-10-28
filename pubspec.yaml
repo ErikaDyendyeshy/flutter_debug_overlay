@@ -1,4 +1,4 @@
-name: flutter_debug_overlay_pro
+name: qa_debug_overlay
 description: "A professional debug overlay widget for QA testing with network logging, JSON viewer, and filtering."
 version: 1.0.0
 homepage: https://github.com/yourusername/flutter_debug_overlay

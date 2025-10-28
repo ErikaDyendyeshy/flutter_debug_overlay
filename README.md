@@ -1,13 +1,13 @@
-# 🐞 Flutter Debug Overlay Pro
+# 🐞 QA Debug Overlay
 
 A professional debug overlay for Flutter apps — view network logs, inspect JSON, and debug effortlessly.
 
 
 ## 🎬 Demo
 
-https://github.com/ErikaDyendyeshy/flutter_debug_overlay/blob/main/demo.mp4
+![Demo](demo.gif)
 
-*Demo video showing the debug overlay in action on iOS simulator*
+*Demo showing the debug overlay in action on iOS simulator*
 
 ## ✨ Features
 
@@ -22,7 +22,7 @@ https://github.com/ErikaDyendyeshy/flutter_debug_overlay/blob/main/demo.mp4
 
 ```yaml
 dependencies:
-  flutter_debug_overlay_pro: ^1.0.0
+  qa_debug_overlay: ^1.0.0
   # Latest stable versions:
   dio: ^5.9.0
   http: ^1.5.0
@@ -62,7 +62,7 @@ await dio.get('https://api.example.com');
 
 ### 2. **HTTP Package** (Manual Logging)
 ```dart
-import 'package:flutter_debug_overlay_pro/flutter_debug_overlay_pro.dart';
+import 'package:qa_debug_overlay/qa_debug_overlay.dart';
 
 // Use wrapper methods for automatic logging
 final response = await TestHttpLogger.getWithLogging('https://api.example.com');
@@ -107,7 +107,7 @@ DebugOverlayController.instance.addLog(
 ```dart
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_debug_overlay_pro/flutter_debug_overlay_pro.dart';
+import 'package:qa_debug_overlay/qa_debug_overlay.dart';
 
 void main() {
   runApp(const MyApp());
