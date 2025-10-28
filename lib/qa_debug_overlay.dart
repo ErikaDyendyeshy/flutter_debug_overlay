@@ -26,6 +26,7 @@ library;
 export 'src/controller/debug_overlay_controller.dart';
 
 // Network Interceptors & Helpers
+export 'src/interceptor/debug_interceptor.dart'; // For Dio automatic logging
 export 'src/helpers/firebase_logger.dart'; // For Firebase
 
 // UI Widgets

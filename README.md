@@ -42,11 +42,19 @@ MaterialApp(
 );
 ```
 
-### 2. Add Interceptor (if using Dio)
+### 2. Add Manual Logging (since DebugInterceptor was removed for pub.dev compatibility)
 
 ```dart
-final dio = Dio();
-dio.interceptors.add(DebugInterceptor());
+// For manual logging:
+DebugOverlayController.instance.addLog(
+  NetworkLog.create(
+    method: 'GET',
+    endpoint: '/api/users',
+    statusCode: 200,
+    requestBody: {},
+    responseBody: response.data,
+  ),
+);
 ```
 
 **That's it!** The 🐞 button will appear. Tap it to view logs.
@@ -55,17 +63,26 @@ dio.interceptors.add(DebugInterceptor());
 
 The debug overlay works with **multiple HTTP clients** - add only what you need:
 
-### 1. **Dio** (Recommended - Automatic Logging)
+### 1. **Dio** (Manual Logging Required)
 ```yaml
 dependencies:
   qa_debug_overlay: ^1.0.0
-  dio: ^5.9.0  # Add this for automatic logging
+  dio: ^5.9.0  # Add this for HTTP requests
 ```
 
 ```dart
 final dio = Dio();
-dio.interceptors.add(DebugInterceptor()); // Automatic logging
-await dio.get('https://api.example.com');
+final response = await dio.get('https://api.example.com');
+
+// Manual logging required:
+DebugOverlayController.instance.addLog(
+  NetworkLog.create(
+    method: 'GET',
+    endpoint: '/api/example',
+    statusCode: response.statusCode,
+    responseBody: response.data,
+  ),
+);
 ```
 
 ### 2. **HTTP Package** (Manual Logging)

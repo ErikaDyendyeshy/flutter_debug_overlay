@@ -12,15 +12,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # No external dependencies - flexible integration!
+  dio: ^5.9.0  # For automatic logging with DebugInterceptor
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-  # For testing interceptor functionality
-  dio: ^5.9.0
-  http: ^1.5.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
