@@ -29,12 +29,12 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
       builder: (context, scrollController) {
         return Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
           ),
           child: Column(
             children: [
-              _buildHeader(context),
+              _buildHeader(context, scrollController),
               Expanded(child: _buildLogsList(context, scrollController)),
             ],
           ),
@@ -43,7 +43,7 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
     );
   }
 
-  Widget _buildHeader(BuildContext context) {
+  Widget _buildHeader(BuildContext context, ScrollController scrollController) {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
@@ -67,7 +67,7 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.delete_outline),
+                    Text('🗑️', style: TextStyle(fontSize: 16)),
                     Text(
                       'Clear',
                       style: TextStyle(
@@ -79,7 +79,7 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
                 ),
               ),
               IconButton(
-                icon: const Icon(Icons.close),
+                icon: const Text('❌', style: TextStyle(fontSize: 20)),
                 onPressed: () {
                   DebugOverlayController.instance.hideBottomSheet();
                 },
@@ -138,6 +138,8 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
   Widget _buildLogItem(BuildContext context, NetworkLog log) {
     return SizedBox(
       child: ExpansionTile(
+        maintainState: true,
+        tilePadding: const EdgeInsets.symmetric(horizontal: 16),
         title: _buildLogTitle(log),
         subtitle: _buildLogSubtitle(context, log),
         children: [_buildLogDetails(context, log)],
@@ -490,7 +492,7 @@ class _DebugLogsBottomSheetState extends State<DebugLogsBottomSheet> {
   }
 
   Widget _buildConsistentJsonView(dynamic data) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: JsonTreeView(data: data),
     );

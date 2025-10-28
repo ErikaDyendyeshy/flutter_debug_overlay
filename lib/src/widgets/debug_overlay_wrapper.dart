@@ -40,6 +40,7 @@ class DebugOverlayWrapper extends StatelessWidget {
                 child: Material(
                   color: Colors.black54,
                   child: GestureDetector(
+                    behavior: HitTestBehavior.translucent,
                     onTap: () {
                       controller.hideBottomSheet();
                     },
