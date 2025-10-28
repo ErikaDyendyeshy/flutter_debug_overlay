@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   dio: ^5.9.0
-  flutter_debug_overlay:
+  flutter_debug_overlay_pro:
     path: ../
 
 dev_dependencies:

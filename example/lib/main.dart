@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_debug_overlay/flutter_debug_overlay.dart';
+import 'package:flutter_debug_overlay_pro/flutter_debug_overlay_pro.dart';
 
 /// Example application demonstrating the Debug Overlay
 /// 
@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // Just wrap with DebugOverlayWrapper - that's it!
       builder: (context, child) {
         return DebugOverlayWrapper(child: child ?? const HomePage());
       },
@@ -46,7 +45,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     
-    // Create Dio instance with the DebugInterceptor
     _dio = Dio(BaseOptions(
       baseUrl: 'https://jsonplaceholder.typicode.com',
       connectTimeout: const Duration(seconds: 10),
@@ -57,7 +55,6 @@ class _HomePageState extends State<HomePage> {
       },
     ));
 
-    // Add the debug interceptor - that's all you need!
     _dio.interceptors.add(DebugInterceptor());
   }
 
